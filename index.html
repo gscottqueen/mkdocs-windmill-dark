@@ -42,7 +42,9 @@
         ];
 
     </script>
-    <script src="./js/base.js"></script> 
+    <script src="./js/base.js"></script>
+      <script src="./search/require.js"></script>
+      <script src="./search/search.js"></script> 
 </head>
 
 <body>
@@ -78,6 +80,13 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 
     
     
+    <div class="wm-top-tool pull-right wm-vcenter">
+      <div class="btn-group wm-vcentered" role="group" aria-label="back">
+        <button id="hist-back" type="button" class="btn btn-sm btn-default"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+        <button id="hist-fwd" type="button" class="btn btn-sm btn-default"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+      </div>
+    </div>
+    
 
     
     <a href="" class="wm-top-brand wm-top-link wm-vcenter">
@@ -85,7 +94,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
       <div class="wm-top-title">
         Windmill Dark MkDocs Theme<br>
         
-          <span class="wm-top-version">v0.1.2</span>
+          <span class="wm-top-version">v0.1.4</span>
         
       </div>
     </a>
@@ -98,7 +107,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
   
     <ul class="wm-toctree wm-toc-repo">
       <li class="wm-toc-li wm-toc-lev1">
-      <a class="wm-article-link wm-toc-text" href="https://github.com/noraj1337/mkdocs-windmill-dark">
+      <a class="wm-article-link wm-toc-text" href="https://github.com/noraj1337/mkdocs-windmill-dark/">
         <i class="fa fa-github"></i>
         GitHub
       </a>
@@ -213,12 +222,12 @@ supported by the Windmill Dark theme.</p>
 </div>
 
 <footer class="col-md-12 wm-page-content">
-  <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill-dark">Windmill Dark</a> theme by Grist Labs.</p>
+  <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/noraj1337/mkdocs-windmill-dark">Windmill Dark</a> theme by Alexandre ZANNI.</p>
 </footer>
 
 </body>
 </html>
 <!--
-MkDocs version : 0.16.3
-Build Date UTC : 2017-10-08 19:01:36
+MkDocs version : 0.17.2
+Build Date UTC : 2017-12-29 17:50:38
 -->

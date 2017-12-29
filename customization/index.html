@@ -38,7 +38,9 @@
         ];
 
     </script>
-    <script src="../js/base.js"></script> 
+    <script src="../js/base.js"></script>
+      <script src="../search/require.js"></script>
+      <script src="../search/search.js"></script> 
 </head>
 
 <body>
@@ -77,14 +79,15 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 
     <h1 id="customization">Customization<a class="headerlink" href="#customization" title="Permanent link">#</a></h1>
 <p>For details about standard mkdocs options, see <a href="http://www.mkdocs.org/user-guide/configuration/">MkDocs Configuration</a>.</p>
+<h2 id="extra-configuration-options">Extra configuration options<a class="headerlink" href="#extra-configuration-options" title="Permanent link">#</a></h2>
 <p>In addition, the Windmill Dark theme supports a few additional options, which may be
 listed under the <code>extra:</code> key of <code>mkdocs.yml</code>.</p>
-<h2 id="extra-configuration-options">Extra configuration options<a class="headerlink" href="#extra-configuration-options" title="Permanent link">#</a></h2>
 <p><code>extra.logo</code>: Path to a logo to include in the top bar next to the site name.</p>
 <p><code>extra.version</code>: Version number to include right under the site name.</p>
-<p><code>extra.article_nav_top</code>: Set to <code>false</code> to hide the Previous/Next navigation buttons above article contents.</p>
-<p><code>extra.article_nav_bottom</code>: Set to <code>false</code> to hide the Previous/Next navigation buttons below article contents.</p>
-<p><code>extra.history_buttons</code>: Include back/forward buttons in the top bar. This is
+<p>and under in <code>mkdocs_theme.yml</code>.</p>
+<p><code>article_nav_top</code>: Set to <code>false</code> to hide the Previous/Next navigation buttons above article contents.</p>
+<p><code>article_nav_bottom</code>: Set to <code>false</code> to hide the Previous/Next navigation buttons below article contents.</p>
+<p><code>history_buttons</code>: Include back/forward buttons in the top bar. This is
   useful when the documentation site is included into a bare browser, e.g. into
   an Electron-based application.</p>
 
@@ -117,7 +120,7 @@ listed under the <code>extra:</code> key of <code>mkdocs.yml</code>.</p>
 </div>
 
 <footer class="col-md-12 wm-page-content">
-  <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill-dark">Windmill Dark</a> theme by Grist Labs.</p>
+  <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/noraj1337/mkdocs-windmill-dark">Windmill Dark</a> theme by Alexandre ZANNI.</p>
 </footer>
 
 </body>
