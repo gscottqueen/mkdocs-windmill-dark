@@ -32,7 +32,7 @@
       var is_top_frame = false;
         
         var pageToc = [
-          {title: "Heading B", url: "#heading-b", children: [
+          {title: "Heading B", url: "#_top", children: [
               {title: "Sub-Heading B 1", url: "#sub-heading-b-1" },
               {title: "Sub-Heading B 2", url: "#sub-heading-b-2" },
               {title: "Sub-Heading B 3", url: "#sub-heading-b-3" },
@@ -40,9 +40,7 @@
         ];
 
     </script>
-    <script src="../js/base.js"></script>
-      <script src="../search/require.js"></script>
-      <script src="../search/search.js"></script> 
+    <script src="../js/base.js"></script> 
 </head>
 
 <body>
@@ -53,6 +51,12 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 
 
 <div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+    
+      
     
 
   <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
@@ -86,9 +90,66 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 <li>Aenean at diam non magna dignissim iaculis.</li>
 </ul>
 <h2 id="sub-heading-b-3">Sub-Heading B 3<a class="headerlink" href="#sub-heading-b-3" title="Permanent link">#</a></h2>
-<p>Pellentesque hendrerit, enim at dictum dignissim, enim ipsum venenatis velit, sit amet pretium ligula nisi quis libero. Phasellus quis sapien vitae sem lacinia imperdiet. Sed venenatis facilisis orci. Sed blandit, metus et faucibus imperdiet, libero mauris ultrices mauris, quis placerat orci dolor suscipit sem. Praesent pharetra congue ex, quis efficitur felis faucibus id. Nam feugiat erat vel dolor pretium venenatis. Nunc eu quam elit. Nunc at gravida eros. Nullam vitae felis in sem efficitur dictum id at nunc. Suspendisse sagittis diam a justo cursus imperdiet. Nullam dapibus dui id felis malesuada varius. Aenean aliquet, mi ut semper egestas, massa neque posuere urna, non congue neque velit a ante. Pellentesque purus orci, finibus sit amet nisi ullamcorper, hendrerit luctus magna. Vivamus iaculis interdum elit, vitae vulputate diam hendrerit dignissim. </p>
+<pre><code class="php">require_once 'Zend/Uri/Http.php';
+
+namespace Location\Web;
+
+interface Factory
+{
+    static function _factory();
+}
+
+abstract class URI extends BaseURI implements Factory
+{
+    abstract function test();
+
+    public static $st1 = 1;
+    const ME = &quot;Yo&quot;;
+    var $list = NULL;
+    private $var;
+
+    /**
+     * Returns a URI
+     *
+     * @return URI
+     */
+    static public function _factory($stats = array(), $uri = 'http')
+    {
+        echo __METHOD__;
+        $uri = explode(':', $uri, 0b10);
+        $schemeSpecific = isset($uri[1]) ? $uri[1] : '';
+        $desc = 'Multi
+line description';
+
+        // Security check
+        if (!ctype_alnum($scheme)) {
+            throw new Zend_Uri_Exception('Illegal scheme');
+        }
+
+        $this-&gt;var = 0 - self::$st;
+        $this-&gt;list = list(Array(&quot;1&quot;=&gt; 2, 2=&gt;self::ME, 3 =&gt; \Location\Web\URI::class));
+
+        return [
+            'uri'   =&gt; $uri,
+            'value' =&gt; null,
+        ];
+    }
+}
+
+echo URI::ME . URI::$st1;
+
+__halt_compiler () ; datahere
+datahere
+datahere */
+datahere
+</code></pre>
 
   <br>
+    
+
+    
+    
+      
     
 
   <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
@@ -107,7 +168,11 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 </div>
 
 <footer class="col-md-12 wm-page-content">
-  <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/noraj1337/mkdocs-windmill-dark">Windmill Dark</a> theme by Alexandre ZANNI.</p>
+      <p>
+        <a href="https://github.com/noraj/mkdocs-windmill-dark/edit/master/docs/sample-b.md"><i class="fa fa-github"></i>
+Edit on GitHub</a>
+      </p>
+  <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/noraj/mkdocs-windmill-dark/">Windmill Dark</a> theme by Alexandre ZANNI (noraj).</p>
 </footer>
 
 </body>

@@ -34,7 +34,7 @@
       var is_top_frame = (window === window.parent);
         
         var pageToc = [
-          {title: "Windmill Dark theme", url: "#windmill-dark-theme", children: [
+          {title: "Windmill Dark theme", url: "#_top", children: [
               {title: "About", url: "#about" },
               {title: "Installation", url: "#installation" },
               {title: "Usage", url: "#usage" },
@@ -42,9 +42,7 @@
         ];
 
     </script>
-    <script src="./js/base.js"></script>
-      <script src="./search/require.js"></script>
-      <script src="./search/search.js"></script> 
+    <script src="./js/base.js"></script> 
 </head>
 
 <body>
@@ -62,7 +60,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
           ><i class="fa fa-search" aria-hidden="true"></i></button>
 
         <div class="input-group input-group-sm wm-top-search">
-          <input type="text" name="q" class="form-control" id="mkdocs-search-query" placeholder="Search">
+          <input type="text" name="q" class="form-control" id="mkdocs-search-query" placeholder="Search" autocomplete="off">
           <span class="input-group-btn" role="search">
             
             <button class="btn btn-default dropdown-toggle collapse" data-toggle="dropdown" type="button"><span class="caret"></span></button>
@@ -80,13 +78,6 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 
     
     
-    <div class="wm-top-tool pull-right wm-vcenter">
-      <div class="btn-group wm-vcentered" role="group" aria-label="back">
-        <button id="hist-back" type="button" class="btn btn-sm btn-default"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
-        <button id="hist-fwd" type="button" class="btn btn-sm btn-default"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
-      </div>
-    </div>
-    
 
     
     <a href="" class="wm-top-brand wm-top-link wm-vcenter">
@@ -94,7 +85,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
       <div class="wm-top-title">
         Windmill Dark MkDocs Theme<br>
         
-          <span class="wm-top-version">v0.1.4</span>
+          <span class="wm-top-version">0.1.4</span>
         
       </div>
     </a>
@@ -107,24 +98,18 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
   
     <ul class="wm-toctree wm-toc-repo">
       <li class="wm-toc-li wm-toc-lev1">
-      <a class="wm-article-link wm-toc-text" href="https://github.com/noraj1337/mkdocs-windmill-dark/">
+      <a class="wm-article-link wm-toc-text" href="https://github.com/noraj/mkdocs-windmill-dark/">
         <i class="fa fa-github"></i>
+
         GitHub
       </a>
       </li>
     </ul>
   <ul class="wm-toctree">
-        <li class="wm-toc-li wm-toc-lev1 wm-toc-opener"><span class="wm-toc-text">Windmill Dark Theme</span>
+        <li class="wm-toc-li wm-toc-lev1 "><a href="" class="wm-article-link wm-toc-text">Usage</a>
 </li>
-<li class="wm-toc-li-nested collapse">
-  <ul class="wm-toctree">
-      <li class="wm-toc-li wm-toc-lev2 "><a href="." class="wm-article-link wm-toc-text">Usage</a>
+        <li class="wm-toc-li wm-toc-lev1 "><a href="customization/" class="wm-article-link wm-toc-text">Customization</a>
 </li>
-      <li class="wm-toc-li wm-toc-lev2 "><a href="customization/" class="wm-article-link wm-toc-text">Customization</a>
-</li>
-  </ul>
-</li>
-
         <li class="wm-toc-li wm-toc-lev1 wm-toc-opener"><span class="wm-toc-text">Samples</span>
 </li>
 <li class="wm-toc-li-nested collapse">
@@ -156,6 +141,12 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
   </div>
 
 <div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+    
+      
     
 
   <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
@@ -204,6 +195,11 @@ supported by the Windmill Dark theme.</p>
   <br>
     
 
+    
+    
+      
+    
+
   <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
     
     <div class="wm-article-nav pull-right">
@@ -222,12 +218,16 @@ supported by the Windmill Dark theme.</p>
 </div>
 
 <footer class="col-md-12 wm-page-content">
-  <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/noraj1337/mkdocs-windmill-dark">Windmill Dark</a> theme by Alexandre ZANNI.</p>
+      <p>
+        <a href="https://github.com/noraj/mkdocs-windmill-dark/edit/master/docs/index.md"><i class="fa fa-github"></i>
+Edit on GitHub</a>
+      </p>
+  <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/noraj/mkdocs-windmill-dark/">Windmill Dark</a> theme by Alexandre ZANNI (noraj).</p>
 </footer>
 
 </body>
 </html>
 <!--
-MkDocs version : 0.17.2
-Build Date UTC : 2017-12-29 17:50:38
+MkDocs version : 1.0.4
+Build Date UTC : 2019-08-22 13:49:30
 -->
