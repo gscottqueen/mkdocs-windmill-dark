@@ -314,10 +314,10 @@ function renderPageToc(parentElem, pageUrl, pageToc) {
   }
   pageToc.forEach(addItem);
 
-  $('.wm-page-toc-opener').removeClass('wm-page-toc-opener wm-page-toc-open');
+  // $('.wm-page-toc-opener').removeClass('wm-page-toc-opener wm-page-toc-open');
   collapseAndRemove($('.wm-page-toc'));
 
-  parentElem.addClass('wm-page-toc-opener').toggleClass('wm-page-toc-open', showPageToc);
+  // parentElem.addClass('wm-page-toc-opener').toggleClass('wm-page-toc-open', showPageToc);
   $('<li class="wm-page-toc wm-toc-li-nested collapse">').append(ul).insertAfter(parentElem)
     .collapse(showPageToc ? 'show' : 'hide');
 }
