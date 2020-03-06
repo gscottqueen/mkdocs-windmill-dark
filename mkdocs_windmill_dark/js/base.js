@@ -218,6 +218,7 @@ function initMainWindow() {
 
   // When we click on an opener in the table of contents, open it.
   $('.wm-toc-pane').on('click', '.wm-toc-opener', function(e) {
+    $(!this).removeClass('wm-toc-open');
     $(this).toggleClass('wm-toc-open');
     $(this).next('.wm-toc-li-nested').collapse('toggle');
   });
