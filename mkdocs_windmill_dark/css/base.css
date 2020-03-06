@@ -46,10 +46,7 @@ body {
   color: var(--white);
 }
 
-/***********************************************************************
-Top bar
-***********************************************************************/
-
+/* Top bar */
 .navbar {
 background-color: var(--dark-bg-dark);
 box-shadow: 0 1.5px 3px rgba(0,0,0,.24), 0 3px 8px rgba(0,0,0,.05);
@@ -147,10 +144,7 @@ max-width: 700px;
   width: 20rem;
 }
 
-/***********************************************************************
-Table of contents (side pane)
-***********************************************************************/
-
+/* Table of contents (side pane) */
 .wm-toc-pane {
   position: absolute;
   top: 0px;
@@ -396,7 +390,6 @@ button,
 #wm-toc-button,
 #wm-search-go {
   background-color: var(--dark-bg-dark);
-  /* color: var(--bixal-red); */
   border: 1px solid;
 }
 
@@ -436,7 +429,7 @@ button:hover,
 .btn-default:hover,
 .btn-link:hover,
 #hist-fwd:hover,
-\#hist-back:hover,
+#hist-back:hover,
 #wm-toc-button:hover,
 #wm-search-go:hover {
   background-color: var(--dark-bg-dark-hover);
@@ -577,7 +570,6 @@ pre, .rst-content tt {
   max-width: 100%;
   background: #282b2e;
   border: solid 1px black;
-  /*color: orangered;*/
   overflow-x: auto;
 }
 
@@ -589,7 +581,6 @@ code {
   padding: 2px 5px;
   background: var(dark-code-bg);
   border: none 1px black;
-  color: orangered;
   white-space: pre-wrap;
   word-wrap: break-word;
 }
