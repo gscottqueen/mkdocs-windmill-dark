@@ -168,16 +168,6 @@ body {
   transition: margin-left 0.3s;
 }
 
-.wm-toc-pane.wm-toc-dropdown {
-  position: absolute;
-  display: block;
-  top: 0;
-  left: 0;
-  margin-left: 0;
-  height: auto;
-  box-shadow: 2px 3px 4px 0 var(--grey);
-}
-
 .wm-toc-repo {
   /* margin-top: -15px;
   margin-bottom: 5px;
@@ -482,13 +472,35 @@ body {
     overflow-x: hidden;
   }
 
-  .wm-toc-pane {
-    display: none;
-  }
-
   .wm-content-pane {
     padding-left: 0px;
     overflow: visible;
+  }
+
+  .wm-toc-pane {
+    /* position: inherit; */
+    display: none;
+    /* visibility: hidden; */
+    /* position: absolute; */
+    /* z-index: 999; */
+    width: 100%;
+    height: 100%;
+  }
+
+  .wm-toc-pane.wm-toc-dropdown {
+    /* position: absolute; */
+    display: block;
+    /* top: 0;
+    left: 0; */
+    margin-left: 0;
+    /* height: auto; */
+    box-shadow: 2px 3px 4px 0 var(--dark-bg-dark);
+  }
+
+  .navbar {
+    position: relative;
+    position: fixed;
+    width: 100%;
   }
 
 }
