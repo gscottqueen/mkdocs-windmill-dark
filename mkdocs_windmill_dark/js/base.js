@@ -303,7 +303,6 @@ function collapseAndRemove(collapsibleElem) {
 }
 
 function renderPageToc(parentElem, pageUrl, pageToc) {
-  console.log(pageToc);
   var ul = $('<ul class="wm-toctree">');
   function addItem(tocItem) {
 
@@ -317,6 +316,7 @@ function renderPageToc(parentElem, pageUrl, pageToc) {
     //   tocItem.children.forEach(addItem);
     // }
   }
+
   pageToc[0].children.forEach(addItem);
 
   $('.wm-page-toc-opener').removeClass('wm-page-toc-opener wm-page-toc-open');
@@ -328,6 +328,10 @@ function renderPageToc(parentElem, pageUrl, pageToc) {
   $('<li class="wm-page-toc wm-toc-li-nested collapse">').append(ul).insertAfter(parentElem)
     .collapse(showPageToc ? 'show' : 'hide');
 }
+
+$("a").on( "click", function () {
+  alert("Handler for .click() called.");
+});
 
 
 if (!mainWindow) {
@@ -433,6 +437,14 @@ function initSearch() {
           searchResults.find('a').eq(e.which === Keys.UP ? -1 : 0).focus();
         }, 0);
       }
+    }
+  });
+
+  // keep our current links from reloading
+  $('a').on('click', function (e) {
+    if ($(this).parent().hasClass('wm-current')) {
+      console.log(e);
+      e.preventDefault();
     }
   });
 
