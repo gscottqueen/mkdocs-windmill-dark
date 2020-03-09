@@ -48,6 +48,7 @@
 body {
   background-color: var(--dark-bg-dark);
   color: var(--white);
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Top bar */
@@ -200,6 +201,14 @@ body {
   padding-left: 0px;
 }
 
+.wm-toctree-title {
+  padding: 10px 2px 10px 10px;
+  display: block;
+  height: 100%;
+  background-color: var(--dark-bg-light-hover);
+  color: var(--white);
+}
+
 .wm-toctree {
   list-style-type: none;
   /* line-height: 16px; */
@@ -230,11 +239,14 @@ body {
 }
 
 .wm-toc-lev1 > .wm-toc-text {
-  padding-left: 14px;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 400;
 }
 
 .wm-toc-lev2 > .wm-toc-text {
   padding-left: 28px;
+  font-weight: 400;
 }
 
 .wm-toc-lev3 > .wm-toc-text {
@@ -320,6 +332,9 @@ body {
 .wm-toc-li-nested.wm-page-toc {
   overflow: hidden;
   border-left: 2px solid var(--dark-bg-light-hover);
+  font-size: 12px;
+  font-weight: 300;
+  line-height: normal;
 }
 
 .wm-small-show {
@@ -378,7 +393,7 @@ body {
 }
 
 #mkdocs-search-results {
-  font-family: "Helvetica Neue;Helvetica,Arial,sans-serif,FontAwesome;
+  /* font-family: "Helvetica Neue;Helvetica,Arial,sans-serif,FontAwesome; */
 }
 
 .search-link {
@@ -649,7 +664,7 @@ footer {
 }
 
 .headerlink {
-  font-family: FontAwesome;
+  /* font-family: FontAwesome; */
   font-size: 14px;
   display: none;
   padding-left: .5em;
