@@ -286,6 +286,7 @@ function onIframeLoad() {
   iframeWindow.focus();
 }
 
+
 /**
  * Hides a bootstrap collapsible element, and removes it from DOM once hidden.
  */
@@ -302,23 +303,28 @@ function collapseAndRemove(collapsibleElem) {
 }
 
 function renderPageToc(parentElem, pageUrl, pageToc) {
+  console.log(pageToc);
   var ul = $('<ul class="wm-toctree">');
   function addItem(tocItem) {
+
     ul.append($('<li class="wm-toc-li">')
       .append($('<a class="wm-article-link wm-page-toc-text">')
         .attr('href', pageUrl + tocItem.url)
         .attr('data-wm-adjusted', 'done')
         .text(tocItem.title)));
-    if (tocItem.children) {
-      tocItem.children.forEach(addItem);
-    }
+    // if (tocItem.children) {
+    //   // console.log(tocItem.children);
+    //   tocItem.children.forEach(addItem);
+    // }
   }
-  pageToc.forEach(addItem);
+  pageToc[0].children.forEach(addItem);
 
-  // $('.wm-page-toc-opener').removeClass('wm-page-toc-opener wm-page-toc-open');
+  $('.wm-page-toc-opener').removeClass('wm-page-toc-opener wm-page-toc-open');
   collapseAndRemove($('.wm-page-toc'));
 
   // parentElem.addClass('wm-page-toc-opener').toggleClass('wm-page-toc-open', showPageToc);
+  // $('wm-page-toc wm-toc-li-nested').parent().addClass('active');
+
   $('<li class="wm-page-toc wm-toc-li-nested collapse">').append(ul).insertAfter(parentElem)
     .collapse(showPageToc ? 'show' : 'hide');
 }
