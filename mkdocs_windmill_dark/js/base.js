@@ -11,24 +11,26 @@ $(document).ready(function () {
   function switchTheme(e) {
     if (e.target.checked) {
       document.documentElement.setAttribute('data-theme', 'dark');
+      document.getElementById('conetnt-frame').contentWindow.document.documentElement.setAttribute('data-theme', 'dark');
       localStorage.setItem('theme', 'dark');
     }
     else {
       document.documentElement.setAttribute('data-theme', 'light');
+      document.getElementById('conetnt-frame').contentWindow.document.documentElement.setAttribute('data-theme', 'light');
       localStorage.setItem('theme', 'light');
     }
     location.reload();
   }
 
-    const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+  const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
 
-    if (currentTheme) {
-      document.documentElement.setAttribute('data-theme', currentTheme);
+  if (currentTheme) {
+    document.documentElement.setAttribute('data-theme', currentTheme);
 
-      if (currentTheme === 'dark') {
-        toggleSwitch.checked = true;
-      }
+    if (currentTheme === 'dark') {
+      toggleSwitch.checked = true;
     }
+  }
 
   console.log(localStorage);
 });
@@ -309,6 +311,16 @@ function getTocLi(url) {
 function onIframeLoad() {
   var url = iframeWindow.location.href;
   onIframeBeforeLoad(url);
+
+  // const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+
+  // if (currentTheme) {
+  //   document.documentElement.setAttribute('data-theme', currentTheme);
+
+  //   if (currentTheme === 'dark') {
+  //     toggleSwitch.checked = true;
+  //   }
+  // }
 
   if (iframeWindow.pageToc) {
     var relPath = getAbsUrl('#', getRelPath('/', cleanUrlPath(url)));
