@@ -135,10 +135,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
     {% include "article-nav.html" %}
     <br>
   {%- endif %}
-</div>
-
-<footer class="">
-{%- block footer %}
+  {%- block footer %}
   {%- block repo %}
     {%- if page and page.edit_url %}
       <p>
@@ -153,9 +150,11 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 
 
   {%- if config.copyright %}<p>{{ config.copyright }}</p>{%- endif %}
-  <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using a modified <a href="{{ config.repo_url }}">Windmill Dark</a> theme by {{ config.site_author }} (noraj).</p>
-{%- endblock %}
-</footer>
+    <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> using a modified <a href="{{ config.repo_url }}">Windmill Dark</a> theme by {{ config.site_author }} (noraj).</p>
+  {%- endblock %}
+</div>
+
+<footer class=""></footer>
 
 </body>
 </html>
