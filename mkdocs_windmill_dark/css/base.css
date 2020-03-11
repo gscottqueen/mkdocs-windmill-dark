@@ -15,7 +15,7 @@
 --bixal-navy: #172d6a;
 
 /* --terminal colors */
---code-bg: #31363F;
+/* --code-bg: #31363F; */
 --terminal-foreground: #FFFFFF;
 --terminal-background: #282b2e;
 --terminal-ansiBlack: #000000;
@@ -76,6 +76,10 @@ body {
   background-color: var(--bg-dark);
   color: var(--body-font);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+li {
+  margin: 10px 0px;
 }
 
 /* Top bar */
@@ -673,9 +677,7 @@ pre, .rst-content tt {
   background: var(--terminal-background);
   border: solid 1px var(--black);
   overflow-x: auto;
-  /* -webkit-box-shadow: 2px 7px 29px -20px var(--drop-shadow);
-  -moz-box-shadow: 2px 7px 29px -20px var(--drop-shadow);
-  box-shadow: 2px 7px 29px -20px var(--drop-shadow); */
+  margin: 20px 0px;
 }
 
 code.code-large, .rst-content tt.code-large {

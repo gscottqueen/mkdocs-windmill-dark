@@ -11,12 +11,12 @@ $(document).ready(function () {
   function switchTheme(e) {
     if (e.target.checked) {
       document.documentElement.setAttribute('data-theme', 'dark');
-      document.getElementById('conetnt-frame').contentWindow.document.documentElement.setAttribute('data-theme', 'dark');
+      // document.getElementById('conetnt-frame').contentWindow.document.documentElement.setAttribute('data-theme', 'dark');
       localStorage.setItem('theme', 'dark');
     }
     else {
       document.documentElement.setAttribute('data-theme', 'light');
-      document.getElementById('conetnt-frame').contentWindow.document.documentElement.setAttribute('data-theme', 'light');
+      // document.getElementById('conetnt-frame').contentWindow.document.documentElement.setAttribute('data-theme', 'light');
       localStorage.setItem('theme', 'light');
     }
     location.reload();
@@ -33,6 +33,9 @@ $(document).ready(function () {
   }
 
   console.log(localStorage);
+  // document.getElementById('conetnt-frame').onload = function () {
+  //   // console.log("iframe loaded");
+  // }
 });
 
 // The full page consists of a main window with navigation and table of contents, and an inner
@@ -106,6 +109,16 @@ function updateIframe(enableForwardNav) {
   var targetIframeUrl = getAbsUrl('/', targetRelPath);
   var loc = iframeWindow.location;
   var currentIframeUrl = _safeGetLocationHref(loc);
+
+  document.getElementById('conetnt-frame').onload = function () {
+    // we have to update the iframe data-theme as well
+    const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+
+    if (currentTheme) {
+      document.getElementById('conetnt-frame').contentWindow.document.documentElement.setAttribute('data-theme', currentTheme);
+    }
+  }
+
 
   console.log("updateIframe: %s -> %s (%s)", currentIframeUrl, targetIframeUrl,
     currentIframeUrl === targetIframeUrl ? "same" : "replacing");
@@ -311,16 +324,6 @@ function getTocLi(url) {
 function onIframeLoad() {
   var url = iframeWindow.location.href;
   onIframeBeforeLoad(url);
-
-  // const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
-
-  // if (currentTheme) {
-  //   document.documentElement.setAttribute('data-theme', currentTheme);
-
-  //   if (currentTheme === 'dark') {
-  //     toggleSwitch.checked = true;
-  //   }
-  // }
 
   if (iframeWindow.pageToc) {
     var relPath = getAbsUrl('#', getRelPath('/', cleanUrlPath(url)));
