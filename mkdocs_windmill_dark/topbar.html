@@ -1,5 +1,13 @@
 <nav class="navbar wm-page-top-frame">
   <div class="container-fluid wm-top-container">
+    {# theme toggle #}
+    <div class="theme-switch-wrapper">
+      <label class="theme-switch" for="checkbox">
+          <input type="checkbox" id="checkbox"/>
+          <div class="slider round"></div>
+      </label>
+      <em>Enable Dark Mode!</em>
+    </div>
     {# Search input and button #}
     <div class="wm-top-tool pull-right wm-vcenter">
       <form class="dropdown wm-vcentered" id="wm-search-form" action="{{ base_url }}/search.html">

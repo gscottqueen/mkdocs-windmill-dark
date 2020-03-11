@@ -2,6 +2,37 @@
 /* exported getParam, onIframeLoad */
 "use strict";
 
+$(document).ready(function () {
+
+  const toggleSwitch = document.getElementById('checkbox');
+
+  toggleSwitch.addEventListener('change', switchTheme, false);
+
+  function switchTheme(e) {
+    if (e.target.checked) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      localStorage.setItem('theme', 'dark');
+    }
+    else {
+      document.documentElement.setAttribute('data-theme', 'light');
+      localStorage.setItem('theme', 'light');
+    }
+    location.reload();
+  }
+
+    const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+
+    if (currentTheme) {
+      document.documentElement.setAttribute('data-theme', currentTheme);
+
+      if (currentTheme === 'dark') {
+        toggleSwitch.checked = true;
+      }
+    }
+
+  console.log(localStorage);
+});
+
 // The full page consists of a main window with navigation and table of contents, and an inner
 // iframe containing the current article. Which article is shown is determined by the main
 // window's #hash portion of the URL. In fact, we use the simple rule: main window's URL of

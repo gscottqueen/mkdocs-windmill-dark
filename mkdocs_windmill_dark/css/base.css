@@ -14,14 +14,19 @@
 --bixal-purple: #7d0096;
 --bixal-navy: #172d6a;
 
-/* dark ui colors */
---dark-bg-light: #282C34;
---dark-bg-light-hover: #2C323C;
---dark-bg-dark: #21252B;
---dark-bg-dark-hover: #2C313A;
+/* ui colors */
+--bg-light: #ffffff;
+--bg-light-hover: #e9e8e8;
+--bg-dark: #eeeeee;
+--bg-dark-hover: #e4e4e4;
+
+/* font color */
+--body-font: #000000;
+--link-font: #000000;
+--heading-font: var(--bixal-navy);
 
 /* --terminal colors */
---dark-code-bg: #31363F;
+--code-bg: #31363F;
 --terminal-foreground: #FFFFFF;
 --terminal-background: #282C34;
 --terminal-ansiBlack: #000000;
@@ -45,15 +50,30 @@
 --terminalCursor-foreground: #46D5CC;
 }
 
+/* .theme-switch input[type="checkbox"] {} */
+
+[data-theme="dark"] {
+  /* ui colors */
+  --bg-light: #282C34;
+  --bg-light-hover: #2C323C;
+  --bg-dark: #21252B;
+  --bg-dark-hover: #2C313A;
+
+  /* font color */
+  --body-font: #ffffff;
+  --link-font: #ffffff;
+  --heading-font: var(--bixal-blue);
+}
+
 body {
-  background-color: var(--dark-bg-dark);
-  color: var(--white);
+  background-color: var(--bg-dark);
+  color: var(--body-font);
   font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Top bar */
 .navbar {
-  background-color: var(--dark-bg-light);
+  background-color: var(--bg-light);
   border: none;
   border-radius: 0px;
   margin-bottom: 0px;
@@ -75,7 +95,7 @@ body {
 
 .wm-top-page > .wm-page-top-frame {
   display: block;
-  border-bottom: 2px solid var(--dark-bg-light-hover);
+  border-bottom: 2px solid var(--bg-light-hover);
 }
 
 .wm-top-page > .wm-page-content {
@@ -83,12 +103,12 @@ body {
 }
 
 .wm-top-brand {
-  display: inline-block;
+  /* display: inline-block; */
   float: left;
   overflow: visible;
   width: 0px;
   height: 50px;
-  color: var(--white);
+  color: var(--body-font);
   font-size: 18px;
   white-space: nowrap;
   text-decoration: none;
@@ -101,7 +121,7 @@ body {
 .wm-top-link:active,
 .wm-top-link:visited,
 .wm-top-link:focus {
-  color: var(--white);
+  color: var(--link-font);
   text-decoration: none;
 }
 
@@ -132,7 +152,7 @@ body {
   border: 1px solid var(--bixal-red);
   border-radius: 3px;
   padding: 0px 5px;
-  color: var(--white);
+  color: var(--body-font);
   font-size: 8pt;
 }
 
@@ -157,8 +177,8 @@ body {
   height: 100%;
   width: 250px;
   z-index: 1;
-  background-color: var(--dark-bg-light);
-  border-right: 2px solid var(--dark-bg-light-hover);
+  background-color: var(--bg-light);
+  border-right: 2px solid var(--bg-light-hover);
   overflow: auto;
   margin-left: 0px;
   padding-top: 70px;
@@ -172,11 +192,11 @@ body {
   /* margin-top: -15px;
   margin-bottom: 5px;
   padding-bottom: 5px;
-  border-bottom: 1px none var(--dark-bg-dark); */
+  border-bottom: 1px none var(--bg-dark); */
   position: fixed;
   bottom: 0;
-  border-top: 2px solid var(--dark-bg-dark-hover);
-  background: var(--dark-bg-light);
+  border-top: 2px solid var(--bg-dark-hover);
+  background: var(--bg-light);
   z-index: 2;
   width: 100%;
   left: 0;
@@ -195,8 +215,8 @@ body {
   padding: 10px 2px 10px 10px;
   display: block;
   height: 100%;
-  background-color: var(--dark-bg-light-hover);
-  color: var(--white);
+  background-color: var(--bg-light-hover);
+  color: var(--link-font);
 }
 
 .wm-toctree {
@@ -213,13 +233,13 @@ body {
 
 .wm-toctree a:hover,
 .wm-toctree a:focus {
-  background-color: var(--dark-bg-light-hover);
-  color: var(--white);
+  background-color: var(--bg-light-hover);
+  color: var(--body-font);
 }
 
 .wm-toctree a:focus {
-  background-color: var(--dark-bg-dark);
-  color: var(--white);
+  background-color: var(--bg-dark);
+  color: var(--body-font);
 }
 
 .wm-toc-text {
@@ -270,7 +290,7 @@ body {
   position: absolute;
   left: 0;
   bottom: 16px;
-  border-bottom: 2px solid var(--dark-bg-light-hover);
+  border-bottom: 2px solid var(--bg-light-hover);
   width: 14px;
   height: 14px;
   margin-right: 2px;
@@ -303,25 +323,25 @@ body {
 }
 
 .wm-toc-li.wm-current {
-  background-color: var(--dark-bg-light-hover);
+  background-color: var(--bg-light-hover);
 }
 
 .wm-toc-li.wm-current a {
-  color: var(--white);
+  color: var(--link-font);
 }
 
 .wm-toc-li.wm-current a:hover {
-  background-color: var(--dark-bg-light-hover);
+  background-color: var(--bg-light-hover);
 }
 
 .wm-toc-li:hover {
-  background-color: var(--dark-bg-dark-hover);
-  color: var(--white);
+  background-color: var(--bg-dark-hover);
+  color: var(--link-font);
 }
 
 .wm-toc-li-nested.wm-page-toc {
   overflow: hidden;
-  border-left: 2px solid var(--dark-bg-light-hover);
+  border-left: 2px solid var(--bg-light-hover);
   font-size: 12px;
   font-weight: 300;
   line-height: normal;
@@ -343,7 +363,7 @@ body {
   right: 0px;
   padding: inherit;
   width: 100%;
-  background-color: var(--dark-bg-dark);
+  background-color: var(--bg-dark);
 }
 
 .wm-top-search {
@@ -360,8 +380,8 @@ body {
 }
 
 #wm-search-go {
-  background-color: var(--dark-bg-dark);
-  border: 2px solid var(--dark-bg-light-hover);
+  background-color: var(--bg-dark);
+  border: 2px solid var(--bg-light-hover);
   border-left: none;
   color: var(--grey);
   padding-top: 4px;
@@ -382,9 +402,7 @@ body {
   max-width: 90vw;
 }
 
-#mkdocs-search-results {
-  /* font-family: "Helvetica Neue;Helvetica,Arial,sans-serif,FontAwesome; */
-}
+/* #mkdocs-search-results {} */
 
 .search-link {
   font-size: 1.2rem;
@@ -403,7 +421,7 @@ body {
 }
 
 .search-text > b {
-  color: var(--white);
+  color: var(--body-font);
 }
 
 .wm-search-page {
@@ -494,7 +512,7 @@ body {
     left: 0; */
     margin-left: 0;
     /* height: auto; */
-    box-shadow: 2px 3px 4px 0 var(--dark-bg-dark);
+    box-shadow: 2px 3px 4px 0 var(--bg-dark);
   }
 
   .navbar {
@@ -520,12 +538,12 @@ button,
 #hist-fwd,
 #hist-back,
 #wm-toc-button {
-  background-color: var(--dark-bg-dark);
+  background-color: var(--bg-dark);
   border: 1px solid;
 }
 
 .btn-link {
-  background-color: var(--dark-bg-dark);
+  background-color: var(--bg-dark);
   /* Compensate for border*/
   margin: 1px;
   border: none;
@@ -549,7 +567,7 @@ button:focus,
 #hist-fwd:focus,
 #hist-back:focus,
 #wm-toc-button:focus {
-  background-color: var(--dark-bg-dark-hover);
+  background-color: var(--bg-dark-hover);
 }
 
 button:hover,
@@ -561,7 +579,7 @@ button:hover,
 #hist-fwd:hover,
 #hist-back:hover,
 #wm-toc-button:hover {
-  background-color: var(--dark-bg-dark-hover);
+  background-color: var(--bg-dark-hover);
 }
 
 .btn-default.greybtn {
@@ -577,7 +595,7 @@ button:hover,
   display: inline-block;
   padding: 4px;
   line-height: 1.428571429;
-  background-color: var(--dark-bg-dark-hover);
+  background-color: var(--bg-dark-hover);
   border-radius: 4px;
   margin: 20px auto 30px auto;
 }
@@ -586,7 +604,7 @@ button:hover,
   display: inline-block;
   max-width: 48%;
   white-space: nowrap;
-  color: var(--white);
+  color: var(--body-font);
   text-align: right;
 }
 
@@ -602,7 +620,7 @@ button:hover,
 .wm-article-nav > a:visited,
 .wm-article-nav > a:hover,
 .wm-article-nav > a:focus {
-  color: var(--white);
+  color: var(--link-font);
   text-decoration: none;
   outline: none;
 }
@@ -614,20 +632,20 @@ float: right;
 
 /* headings */
 h1 {
-  color: var(--bixal-blue);
+  color: var(--heading-font);
   font-weight: 400;
   font-size: 42px;
   padding-top: 10px
 }
 
 h2, h3, h4, h5, h6 {
-  color: var(--bixal-blue);
+  color: var(--heading-font);
   font-weight: 300;
   padding-top: 10px
 }
 
 .search-title {
-  color: var(--bixal-blue);
+  color: var(--heading-font);
 }
 
 /* rules */
@@ -648,7 +666,7 @@ code.code-large, .rst-content tt.code-large {
 
 code {
   padding: 2px 5px;
-  background: var(dark-code-bg);
+  background: var(--dark-code-bg);
   border: none 1px black;
   white-space: pre-wrap;
   word-wrap: break-word;
@@ -738,15 +756,15 @@ h6:hover .headerlink{
 
 /* Custom Additions */
 input#mkdocs-search-query.form-control {
-  background-color: var(--dark-bg-dark);
-  border: 2px solid var(--dark-bg-light-hover);
+  background-color: var(--bg-dark);
+  border: 2px solid var(--bg-light-hover);
 }
 
 .dropdown-menu, .dropdown-menu li {
-  background-color: var(--dark-bg-dark);
+  background-color: var(--bg-dark);
 }
 .dropdown-menu li a:hover {
-  background-color: var(--dark-bg-dark-hover);
+  background-color: var(--bg-dark-hover);
 }
 
 a,
@@ -758,7 +776,7 @@ a,
 
 a:hover,
 a:focus {
-color: var(--dark-bg-dark);
+color: var(--link-font);
 background-color: var(--bixal-blue);
 cursor: pointer;
 text-decoration: underline;
@@ -773,15 +791,15 @@ table {
 
 /* Zebra */
 th {
-  background-color: var(--dark-bg-dark);
+  background-color: var(--bg-dark);
 }
 
 tbody > tr:nth-child(odd),
 tbody > tr:nth-child(odd) > td {
-  background-color: var(--dark-bg-light);
+  background-color: var(--bg-light);
 }
 
 tbody > tr:nth-child(even),
 tbody > tr:nth-child(even) > td {
-  background-color: var(--dark-bg-light-hover);
+  background-color: var(--bg-light-hover);
 }
