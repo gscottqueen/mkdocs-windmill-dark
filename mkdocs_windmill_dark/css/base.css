@@ -17,7 +17,7 @@
 /* --terminal colors */
 --code-bg: #31363F;
 --terminal-foreground: #FFFFFF;
---terminal-background: #282C34;
+--terminal-background: #282b2e;
 --terminal-ansiBlack: #000000;
 --terminal-ansiBlue: #5576DB;
 --terminal-ansiCyan: #8ADADD;
@@ -46,6 +46,7 @@
 --bg-light-hover: #e9e8e8;
 --bg-dark: #eeeeee;
 --bg-dark-hover: #e4e4e4;
+/* --drop-shadow: rgb(10, 19, 45); */
 
 /* font color */
 --body-font: #000000;
@@ -61,6 +62,7 @@
   --bg-light-hover: #2C323C;
   --bg-dark: #21252B;
   --bg-dark-hover: #2C313A;
+  /* --drop-shadow: var(--black); */
 
   /* font color */
   --body-font: #ffffff;
@@ -523,7 +525,9 @@ body {
     left: 0; */
     margin-left: 0;
     /* height: auto; */
-    box-shadow: 2px 3px 4px 0 var(--bg-dark);
+    -webkit-box-shadow: 2px 7px 29px -20px var(--drop-shadow);
+    -moz-box-shadow: 2px 7px 29px -20px var(--drop-shadow);
+    box-shadow: 2px 7px 29px -20px var(--drop-shadow);
   }
 
   .navbar {
@@ -666,9 +670,12 @@ hr {
 
 pre, .rst-content tt {
   max-width: 100%;
-  background: #282b2e;
-  border: solid 1px black;
+  background: var(--terminal-background);
+  border: solid 1px var(--black);
   overflow-x: auto;
+  /* -webkit-box-shadow: 2px 7px 29px -20px var(--drop-shadow);
+  -moz-box-shadow: 2px 7px 29px -20px var(--drop-shadow);
+  box-shadow: 2px 7px 29px -20px var(--drop-shadow); */
 }
 
 code.code-large, .rst-content tt.code-large {
@@ -677,7 +684,7 @@ code.code-large, .rst-content tt.code-large {
 
 code {
   padding: 2px 5px;
-  background: var(--dark-code-bg);
+  background: var(--terminal-background);
   border: none 1px black;
   white-space: pre-wrap;
   word-wrap: break-word;
@@ -798,6 +805,9 @@ outline: none;
 /* tables */
 table {
   background-color: inherit;
+  -webkit-box-shadow: 2px 7px 29px -20px var(--drop-shadow);
+  -moz-box-shadow: 2px 7px 29px -20px var(--drop-shadow);
+  box-shadow: 2px 7px 29px -20px var(--drop-shadow);
 }
 
 /* Zebra */
