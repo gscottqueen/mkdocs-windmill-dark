@@ -50,6 +50,8 @@
 /* font color */
 --body-font: #000000;
 --link-font: #000000;
+--active-link-font: #ffffff;
+--active-link-bg: var(--bixal-navy);
 --heading-font: var(--bixal-navy);
 }
 
@@ -63,6 +65,8 @@
   /* font color */
   --body-font: #ffffff;
   --link-font: #ffffff;
+  --active-link-font: #000000;
+  --active-link-bg: var(--bixal-blue);
   --heading-font: var(--bixal-blue);
 }
 
@@ -80,6 +84,12 @@ body {
   margin-bottom: 0px;
   height: 50px;
   z-index: 2;
+}
+
+.theme-switch-wrapper {
+  display: inline-flex;
+  float: right;
+  margin: 20px 20px 0px;
 }
 
 .wm-top-page {
@@ -770,15 +780,15 @@ input#mkdocs-search-query.form-control {
 
 a,
 .wm-page-content a {
-  color: var(--white);
+  color: var(--link-font);
   text-decoration: underline;
   outline: none;
 }
 
 a:hover,
 a:focus {
-color: var(--link-font);
-background-color: var(--bixal-blue);
+color: var(--active-link-font);
+background-color: var(--active-link-bg);
 cursor: pointer;
 text-decoration: underline;
 outline: none;

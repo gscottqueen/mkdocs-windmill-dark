@@ -4,7 +4,7 @@
 
 $(document).ready(function () {
 
-  const toggleSwitch = document.getElementById('checkbox');
+  const toggleSwitch = document.getElementById('theme-toggle');
 
   toggleSwitch.addEventListener('change', switchTheme, false);
 
