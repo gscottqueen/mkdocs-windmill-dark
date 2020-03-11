@@ -79,7 +79,11 @@ body {
 }
 
 li {
-  margin: 10px 0px;
+  margin: 5px 0px;
+}
+
+.wm-toctree li {
+  margin: initial;
 }
 
 /* Top bar */
