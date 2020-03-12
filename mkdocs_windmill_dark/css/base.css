@@ -15,7 +15,6 @@
 --bixal-navy: #172d6a;
 
 /* --terminal colors */
-/* --code-bg: #31363F; */
 --terminal-foreground: #FFFFFF;
 --terminal-background: #282b2e;
 --terminal-ansiBlack: #000000;
@@ -54,6 +53,7 @@
 --active-link-font: #ffffff;
 --active-link-bg: var(--bixal-navy);
 --heading-font: var(--bixal-navy);
+--code-font: var(--terminal-ansiBrightBlack);
 
 /* other */
 --icon-plus: url(../img/plus-black.svg);
@@ -706,9 +706,10 @@ code.code-large, .rst-content tt.code-large {
 code {
   padding: 2px 5px;
   background: var(--terminal-background);
-  border: none 1px black;
+  border: none 1px var(--black);
   white-space: pre-wrap;
   word-wrap: break-word;
+  color: var(--white);
 }
 
 pre code {
