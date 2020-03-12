@@ -690,7 +690,8 @@ pre code {
   font-size: 12px;
 }
 
-footer {
+footer,
+.repo-wrapper {
   margin-bottom: 10px;
   text-align: center;
   font-weight: 200;
