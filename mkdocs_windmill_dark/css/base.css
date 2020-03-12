@@ -38,14 +38,12 @@
 --terminalCursor-foreground: #46D5CC;
 }
 
-/* .theme-switch input[type="checkbox"] {} */
 :root[data-theme="light"] {
 /* ui colors */
 --bg-light: #ffffff;
 --bg-light-hover: #e9e8e8;
 --bg-dark: #eeeeee;
 --bg-dark-hover: #e4e4e4;
-/* --drop-shadow: rgb(10, 19, 45); */
 
 /* font color */
 --body-font: #000000;
@@ -66,7 +64,6 @@
   --bg-light-hover: #2C323C;
   --bg-dark: #21252B;
   --bg-dark-hover: #2C313A;
-  /* --drop-shadow: var(--black); */
 
   /* font color */
   --body-font: #ffffff;
@@ -89,10 +86,6 @@ body {
 
 li {
   margin: 10px 0px;
-}
-
-.wm-toctree li {
-  margin: initial;
 }
 
 /* Top bar */
@@ -133,7 +126,6 @@ li {
 }
 
 .wm-top-brand {
-  /* display: inline-block; */
   float: left;
   overflow: visible;
   width: 0px;
@@ -205,32 +197,15 @@ li {
   position: absolute;
   top: 0px;
   height: 100%;
-  width: 250px;
+  width: 275px;
   z-index: 1;
   background-color: var(--bg-light);
   border-right: 2px solid var(--bg-light-hover);
   overflow: auto;
   margin-left: 0px;
   padding-top: 70px;
-  padding-left: 1rem;
-  padding-right: 1rem;
   padding-bottom: 2rem;
   transition: margin-left 0.3s;
-}
-
-.wm-toc-repo {
-  /* margin-top: -15px;
-  margin-bottom: 5px;
-  padding-bottom: 5px;
-  border-bottom: 1px none var(--bg-dark); */
-  position: fixed;
-  bottom: 0;
-  border-top: 2px solid var(--bg-dark-hover);
-  background: var(--bg-light);
-  z-index: 2;
-  width: 100%;
-  left: 0;
-  margin: 0px;
 }
 
 .wm-toc-hidden > .wm-toc-pane {
@@ -254,6 +229,10 @@ li {
   padding-left: 0px;
 }
 
+.wm-toctree li {
+  margin: initial;
+}
+
 .wm-toctree a,
 .wm-toctree a:visited {
   text-decoration: none;
@@ -273,7 +252,7 @@ li {
 
 .wm-toc-text {
   display: block;
-  padding: 4px;
+  padding: 4px 15px;
   cursor: pointer;
 }
 
@@ -281,6 +260,10 @@ li {
   font-size: 16px;
   text-transform: uppercase;
   font-weight: 400;
+}
+
+.wm-toc-lev2 {
+  font-size: 14px;
 }
 
 .wm-toc-lev2 > .wm-toc-text {
@@ -293,20 +276,11 @@ li {
 }
 
 .wm-toc-li-nested {
-  /* padding: 0px; */
-  margin: 0px 0px 10px 0px;
+  margin: 10px;
 }
-
-/* .wm-toc-li-nested > .wm-toctree.wm-toc-lev2 {
-  padding-left: 16px;
-} */
 
 /* levels */
-/* pages */
-
-.wm-toc-lev2 {
-  font-size: 14px;
-}
+/* page */
 
 .wm-page-toc-text {
   font-size: 12px;
@@ -317,12 +291,17 @@ li {
   position: relative;
 }
 
+a.wm-page-toc-text:hover,
+a.wm-page-toc-text:focus {
+  border-radius: 0px;
+}
+
 .wm-page-toc-text::before {
   content: "";
   display: block;
   position: absolute;
   left: 0;
-  bottom: 16px;
+  top: 4px;
   border-bottom: 2px solid var(--bg-light-hover);
   width: 7px;
   height: 14px;
@@ -341,10 +320,6 @@ li {
 .wm-toc-lev3 + .wm-page-toc {
   margin-left: 42px;
 }
-
-/* .wm-toc-opener.wm-toc-open {
-  background-color: var(--bg-dark-hover);
-} */
 
 .wm-toc-opener > .wm-toc-text::before,
 .wm-page-toc-opener > .wm-toc-text::before {
@@ -366,9 +341,9 @@ li {
   left: 5px;
 }
 
-/* .wm-toc-lev2.wm-toc-open > .wm-toc-text::before {
-  left: 5px;
-} */
+.wm-toc-li {
+  line-height: 1.6;
+}
 
 .wm-toc-li.wm-current {
   background-color: var(--bg-light-hover);
@@ -495,7 +470,6 @@ li {
   text-decoration: underline;
 }
 
-
 @media (max-width: 600px) {
 
   .wm-small-hide {
@@ -544,22 +518,14 @@ li {
   }
 
   .wm-toc-pane {
-    /* position: inherit; */
     display: none;
-    /* visibility: hidden; */
-    /* position: absolute; */
-    /* z-index: 999; */
     width: 100%;
     height: 100%;
   }
 
   .wm-toc-pane.wm-toc-dropdown {
-    /* position: absolute; */
     display: block;
-    /* top: 0;
-    left: 0; */
     margin-left: 0;
-    /* height: auto; */
     -webkit-box-shadow: 2px 7px 29px -20px var(--drop-shadow);
     -moz-box-shadow: 2px 7px 29px -20px var(--drop-shadow);
     box-shadow: 2px 7px 29px -20px var(--drop-shadow);
@@ -664,7 +630,7 @@ button:hover,
 
 /* The rest is taken from base.css from mkdocs */
 .source-links {
-float: right;
+  float: right;
 }
 
 /* headings */
