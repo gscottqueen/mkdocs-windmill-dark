@@ -14,28 +14,6 @@
 --bixal-purple: #7d0096;
 --bixal-navy: #172d6a;
 
-/* --terminal colors */
---terminal-foreground: #FFFFFF;
---terminal-background: #282b2e;
---terminal-ansiBlack: #000000;
---terminal-ansiBlue: #5576DB;
---terminal-ansiCyan: #8ADADD;
---terminal-ansiGreen: #56E38F;
---terminal-ansiMagenta: #BF78D7;
---terminal-ansiRed: #DF544D;
---terminal-ansiWhite: #E7E7E7;
---terminal-ansiYellow: #F0F101;
---terminal-ansiBrightBlack: #666666;
---terminal-ansiBrightBlue: #6187FF;
---terminal-ansiBrightCyan: #9EFBFF;
---terminal-ansiBrightGreen: #5FFFA2;
---terminal-ansiBrightMagenta: #E18DFF;
---terminal-ansiBrightRed: #FF6059;
---terminal-ansiBrightWhite: #FFFFFF;
---terminal-ansiBrightYellow: #FEFF01;
---terminal-selectionBackground: #6b758b3f;
---terminalCursor-background: #46D5CC;
---terminalCursor-foreground: #46D5CC;
 }
 
 :root[data-theme="light"] {
@@ -661,7 +639,7 @@ hr {
 /* code */
 pre, .rst-content tt {
   max-width: 100%;
-  background: var(--terminal-background);
+  background: #011627;
   border: solid 1px var(--black);
   overflow-x: auto;
   margin: 20px 0px;
@@ -673,7 +651,7 @@ code.code-large, .rst-content tt.code-large {
 
 code {
   padding: 2px 5px;
-  background: var(--terminal-background);
+  background: #011627;
   border: none 1px var(--black);
   white-space: pre-wrap;
   word-wrap: break-word;
