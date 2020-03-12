@@ -100,8 +100,6 @@ li {
 
 .theme-switch-wrapper {
   display: inline-flex;
-  float: right;
-  margin: 20px 20px 0px;
 }
 
 .wm-top-page {
@@ -197,7 +195,7 @@ li {
   position: absolute;
   top: 0px;
   height: 100%;
-  width: 275px;
+  width: 250px;
   z-index: 1;
   background-color: var(--bg-light);
   border-right: 2px solid var(--bg-light-hover);
@@ -345,6 +343,10 @@ a.wm-page-toc-text:focus {
   line-height: 1.6;
 }
 
+li.wm-toc-lev2 a {
+  padding-left: 0px;
+}
+
 .wm-toc-li.wm-current {
   background-color: var(--bg-light-hover);
 }
@@ -394,7 +396,7 @@ a.wm-page-toc-text:focus {
 }
 
 #wm-search-form {
-  width: 100%;
+  /* width: 100%; */
   color: var(--grey);
 }
 
