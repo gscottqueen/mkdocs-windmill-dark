@@ -54,6 +54,10 @@
 --active-link-font: #ffffff;
 --active-link-bg: var(--bixal-navy);
 --heading-font: var(--bixal-navy);
+
+/* other */
+--icon-plus: url(../img/plus-black.svg);
+--icon-minus: url(../img/minus-black.svg);
 }
 
 :root[data-theme="dark"] {
@@ -70,16 +74,21 @@
   --active-link-font: #000000;
   --active-link-bg: var(--bixal-blue);
   --heading-font: var(--bixal-blue);
+
+  /* other */
+  --icon-plus: url(../img/plus-white.svg);
+  --icon-minus: url(../img/minus-white.svg);
 }
 
 body {
   background-color: var(--bg-dark);
+  line-height: 1.8;
   color: var(--body-font);
   font-family: Arial, Helvetica, sans-serif;
 }
 
 li {
-  margin: 5px 0px;
+  margin: 10px 0px;
 }
 
 .wm-toctree li {
@@ -242,7 +251,6 @@ li {
 
 .wm-toctree {
   list-style-type: none;
-  /* line-height: 16px; */
   padding-left: 0px;
 }
 
@@ -276,7 +284,7 @@ li {
 }
 
 .wm-toc-lev2 > .wm-toc-text {
-  padding-left: 28px;
+  margin-left: 28px;
   font-weight: 400;
 }
 
@@ -285,9 +293,13 @@ li {
 }
 
 .wm-toc-li-nested {
-  padding: 0px;
+  /* padding: 0px; */
   margin: 0px 0px 10px 0px;
 }
+
+/* .wm-toc-li-nested > .wm-toctree.wm-toc-lev2 {
+  padding-left: 16px;
+} */
 
 /* levels */
 /* pages */
@@ -330,18 +342,33 @@ li {
   margin-left: 42px;
 }
 
+.wm-toc-opener.wm-toc-open {
+  background-color: var(--bg-dark-hover);
+}
+
 .wm-toc-opener > .wm-toc-text::before,
 .wm-page-toc-opener > .wm-toc-text::before {
-  content: ' \002B';
+  content: '';
   display: inline-block;
-  vertical-align: middle;
-  width: 14px;
+  background: var(--icon-plus) no-repeat center;
+  width: 12px;
+  height: 12px;
+  margin-right: 8px;
 }
 
 .wm-toc-opener.wm-toc-open > .wm-toc-text::before,
 .wm-page-toc-opener.wm-page-toc-open > .wm-toc-text::before {
-  content: ' \002D';
+  background: var(--icon-minus) no-repeat center;
 }
+
+.wm-toc-lev2 > .wm-toc-text::before,
+.wm-toc-lev2.wm-toc-open > .wm-toc-text::before {
+  left: 5px;
+}
+
+/* .wm-toc-lev2.wm-toc-open > .wm-toc-text::before {
+  left: 5px;
+} */
 
 .wm-toc-li.wm-current {
   background-color: var(--bg-light-hover);
