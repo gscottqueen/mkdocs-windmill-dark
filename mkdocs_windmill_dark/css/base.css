@@ -82,9 +82,9 @@ li {
   z-index: 2;
 }
 
-.theme-switch-wrapper {
+/* .theme-switch-wrapper {
   display: inline-flex;
-}
+} */
 
 .wm-top-page {
   overflow: hidden;
@@ -545,6 +545,10 @@ button,
   border: 1px solid;
 }
 
+#wm-toc-button {
+  margin-right: 10px;
+}
+
 .btn-link {
   /* Compensate for border*/
   margin: 1px;
@@ -573,6 +577,55 @@ button:hover,
 .wm-article-nav > a.btn:visited:hover {
   color: var(--active-link-font);
   background-color: var(--active-link-bg);
+}
+
+/*Simple css to style it like a toggle switch*/
+.theme-switch-wrapper {
+  display: inline-block;
+  position: relative;
+  margin-right: 40px;
+}
+
+/* .theme-switch {
+  display: inline-block;
+  position: relative;
+} */
+
+.theme-switch input {
+  display: none;
+}
+
+.checkoff {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  /* padding: 5px 10px; */
+  /* line-height: 1.5; */
+  border-radius: 3px;
+  background: url(../img/moon-black.svg) no-repeat center;
+  background-size: 25px;
+  background-color: #ccc;
+  cursor: pointer;
+  height: 25px;
+  width: 25px;
+}
+
+input:checked + .checkoff {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  line-height: 1.5;
+  border-radius: 3px;
+  background: url(../img/sun-white.svg) no-repeat center;
+  background-size: 25px;
+  background-color: var(--bg-dark);
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
 }
 
 .wm-article-nav-buttons {
