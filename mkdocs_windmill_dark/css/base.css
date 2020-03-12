@@ -17,23 +17,26 @@
 }
 
 :root[data-theme="light"] {
-/* ui colors */
---bg-light: #ffffff;
---bg-light-hover: #e9e8e8;
---bg-dark: #eeeeee;
---bg-dark-hover: #e4e4e4;
+  /* ui colors */
+  --bg-light: #ffffff;
+  --bg-light-hover: #e9e8e8;
+  --bg-dark: #eeeeee;
+  --bg-dark-hover: #e4e4e4;
 
-/* font color */
---body-font: #000000;
---link-font: #000000;
---active-link-font: #ffffff;
---active-link-bg: var(--bixal-navy);
---heading-font: var(--bixal-navy);
---code-font: var(--terminal-ansiBrightBlack);
+  /* font color */
+  --body-font: #000000;
+  --link-font: #000000;
+  --active-link-font: #ffffff;
+  --active-link-bg: var(--bixal-navy);
+  --heading-font: var(--bixal-navy);
+  --code-font: var(--terminal-ansiBrightBlack);
 
-/* other */
---icon-plus: url(../img/plus-black.svg);
---icon-minus: url(../img/minus-black.svg);
+  /* other */
+  --icon-plus: url(../img/plus-black.svg);
+  --icon-minus: url(../img/minus-black.svg);
+
+  /* code */
+  --code-bg: #011627;
 }
 
 :root[data-theme="dark"] {
@@ -53,6 +56,9 @@
   /* other */
   --icon-plus: url(../img/plus-white.svg);
   --icon-minus: url(../img/minus-white.svg);
+
+  /* code */
+  --code-bg: #000000;
 }
 
 body {
@@ -639,7 +645,7 @@ hr {
 /* code */
 pre, .rst-content tt {
   max-width: 100%;
-  background: #011627;
+  background: var(--code-bg);
   border: solid 1px var(--black);
   overflow-x: auto;
   margin: 20px 0px;
@@ -651,7 +657,7 @@ code.code-large, .rst-content tt.code-large {
 
 code {
   padding: 2px 5px;
-  background: #011627;
+  background: var(--code-bg);
   border: none 1px var(--black);
   white-space: pre-wrap;
   word-wrap: break-word;
