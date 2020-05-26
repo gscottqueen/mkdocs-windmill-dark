@@ -381,7 +381,8 @@ li.wm-toc-lev2 a {
 
 #wm-search-form {
   /* width: 100%; */
-  color: var(--grey);
+  color: var(--body-font);
+  box-shadow: none;
 }
 
 #wm-search-show {
@@ -390,14 +391,15 @@ li.wm-toc-lev2 a {
 
 #wm-search-go {
   background-color: var(--bg-dark);
-  border: 2px solid var(--bg-light-hover);
-  border-left: none;
+  /* border: 2px solid var(--bg-light-hover); */
+  border: none;
+  /* border-left: none; */
   color: var(--grey);
   padding-top: 4px;
 }
 
 #wm-search-go:hover {
-  background-color: var(--bixal-green);
+  /* background-color: var(--bixal-green); */
 }
 
 
@@ -606,10 +608,10 @@ button:hover,
   border-radius: 3px;
   background: url(../img/moon-black.svg) no-repeat center;
   background-size: 25px;
-  background-color: #ccc;
+  background-color: var(--bg-dark);
   cursor: pointer;
-  height: 25px;
-  width: 25px;
+  height: 30px;
+  width: 30px;
 }
 
 input:checked + .checkoff {
@@ -803,8 +805,14 @@ h6:hover .headerlink{
 /* Custom Additions */
 input#mkdocs-search-query.form-control {
   background-color: var(--bg-dark);
-  border: 2px solid var(--bg-light-hover);
+  border: none;
+  box-shadow: none;
+  /* border: 2px solid var(--bg-light-hover); */
 }
+
+/* input#mkdocs-search-query.form-control:focus {
+
+} */
 
 .dropdown-menu, .dropdown-menu li {
   background-color: var(--bg-dark);
