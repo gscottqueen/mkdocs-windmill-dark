@@ -13,7 +13,6 @@
 --bixal-maroon: #55052a;
 --bixal-purple: #7d0096;
 --bixal-navy: #172d6a;
-
 }
 
 :root[data-theme="light"] {
@@ -376,7 +375,6 @@ li.wm-toc-lev2 a {
 }
 
 #wm-search-form {
-  /* width: 100%; */
   color: var(--body-font);
   box-shadow: none;
 }
@@ -387,17 +385,10 @@ li.wm-toc-lev2 a {
 
 #wm-search-go {
   background-color: var(--bg-dark);
-  /* border: 2px solid var(--bg-light-hover); */
   border: none;
-  /* border-left: none; */
   color: var(--grey);
   padding-top: 4px;
 }
-
-#wm-search-go:hover {
-  /* background-color: var(--bixal-green); */
-}
-
 
 /* Dropdown search results */
 #mkdocs-search-results.dropdown-menu {
@@ -409,7 +400,7 @@ li.wm-toc-lev2 a {
   max-width: 90vw;
 }
 
-/* #mkdocs-search-results {} */
+/* #mkdocs-search-results */
 
 .search-link {
   font-size: 1.2rem;
@@ -537,16 +528,19 @@ button,
 .btn-default,
 .btn-link,
 #hist-fwd,
-#hist-back,
-#wm-toc-button {
+#hist-back {
   background-color: var(--bg-dark);
   border: 1px solid var(--bg-dark);
   box-shadow: none;
   color: var(--body-font)
 }
 
+
 #wm-toc-button {
-  margin-right: 10px;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  color: var(--body-font);
 }
 
 .btn-link {
@@ -572,7 +566,7 @@ button:hover,
 .btn-link:hover
 #hist-fwd:hover,
 #hist-back:hover,
-#wm-toc-button:hover,
+/* #wm-toc-button:hover, */
 .wm-article-nav > a.btn:hover,
 .wm-article-nav > a.btn:visited:hover {
   color: var(--active-link-font);
@@ -597,12 +591,9 @@ button:hover,
   left: 0;
   right: 0;
   top: 0;
-  /* padding: 5px 10px; */
-  /* line-height: 1.5; */
   border-radius: 3px;
   background: url(../img/moon-black.svg) no-repeat center;
   background-size: 25px;
-  background-color: var(--bg-dark);
   cursor: pointer;
   height: 30px;
   width: 30px;
@@ -618,7 +609,6 @@ input:checked + .checkoff {
   border-radius: 3px;
   background: url(../img/sun-white.svg) no-repeat center;
   background-size: 25px;
-  background-color: var(--bg-dark);
   cursor: pointer;
   height: 30px;
   width: 30px;
@@ -801,12 +791,7 @@ input#mkdocs-search-query.form-control {
   background-color: var(--bg-dark);
   border: none;
   box-shadow: none;
-  /* border: 2px solid var(--bg-light-hover); */
 }
-
-/* input#mkdocs-search-query.form-control:focus {
-
-} */
 
 .dropdown-menu, .dropdown-menu li {
   background-color: var(--bg-dark);
