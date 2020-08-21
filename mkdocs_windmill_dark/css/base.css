@@ -82,10 +82,6 @@ li {
   z-index: 2;
 }
 
-/* .theme-switch-wrapper {
-  display: inline-flex;
-} */
-
 .wm-top-page {
   overflow: hidden;
 }
@@ -544,7 +540,9 @@ button,
 #hist-back,
 #wm-toc-button {
   background-color: var(--bg-dark);
-  border: 1px solid;
+  border: 1px solid var(--bg-dark);
+  box-shadow: none;
+  color: var(--body-font)
 }
 
 #wm-toc-button {
@@ -585,13 +583,9 @@ button:hover,
 .theme-switch-wrapper {
   display: inline-block;
   position: relative;
-  margin-right: 40px;
+  margin-right: 44px;
+  top: -2px;
 }
-
-/* .theme-switch {
-  display: inline-block;
-  position: relative;
-} */
 
 .theme-switch input {
   display: none;
