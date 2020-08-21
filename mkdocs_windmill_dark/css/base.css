@@ -3,6 +3,7 @@
 --black: #000000;
 --white: #ffffff;
 --grey: #666666;
+--comment-grey: #b3b3b3;
 
 /* bixal colors */
 --bixal-red: #e02f00;
@@ -28,7 +29,6 @@
   --active-link-font: #ffffff;
   --active-link-bg: var(--bixal-navy);
   --heading-font: var(--bixal-navy);
-  --code-font: var(--terminal-ansiBrightBlack);
 
   /* other */
   --icon-plus: url(../img/plus-black.svg);
@@ -36,6 +36,7 @@
 
   /* code */
   --code-bg: #011627;
+  --code-font-color: var(--comment-grey);
 }
 
 :root[data-theme="dark"] {
@@ -58,6 +59,7 @@
 
   /* code */
   --code-bg: #000000;
+  --code-font-color: var(--comment-grey);
 }
 
 body {
@@ -704,7 +706,7 @@ code {
 }
 
 pre code {
-  color: var(--terminal-ansiBrightBlack);
+  color: var(--code-font-color);
   background: transparent;
   border: none;
   white-space: pre;
